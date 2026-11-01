@@ -1,0 +1,15 @@
+services:
+  commerce-db:
+    image: postgres:17
+    container_name: commerce-db
+    environment:
+      POSTGRES_DB: commerce
+      POSTGRES_USER: commerce
+      POSTGRES_PASSWORD: commerce
+    ports:
+      - "5432:5432"
+    volumes:
+      - commerce-db-data:/var/lib/postgresql/data
+
+volumes:
+  commerce-db-data:

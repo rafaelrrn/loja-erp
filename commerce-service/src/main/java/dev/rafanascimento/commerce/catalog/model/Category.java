@@ -18,7 +18,7 @@ public class Category {
     @Column(length = 50, nullable = false)
     private String code;
 
-    @Column(length = 255, nullable = false)
+    @Column(nullable = false)
     private String name;
 
     @JoinColumn(name = "parent_id")
